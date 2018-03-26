@@ -24,19 +24,19 @@ var data = [
     continent: 'Africa',
     capital: 'Praia',
     description: 'Interested in going there.'
-  }
+  },
   {
     name: 'England',
     continent: 'Europe',
     capital: 'London',
     description: 'My family lives there.'
-  }
+  },
   {
     name: 'Italy',
     continent: 'Europe',
     capital: 'Rome',
     description: 'I like pizza.'
-  }
+  },
   {
     name: 'Belgium',
     continent: 'Europe',
