@@ -6,8 +6,7 @@ var express = require('express')
 var port = 1904
 
 // List of countries (related to step 2).
-var data = [
-  {
+var data = [{
     name: 'The Netherlands',
     continent: 'Europe',
     capital: 'Amsterdam',
@@ -63,5 +62,16 @@ function all(req, res) {
 
 // Get one country (step 4, todo: finish).
 function get(req, res) {
+	var index = req.params.index;
+  if (index < 0 || index > data.length) {
+    res.render('error.ejs', {
+		  code: 404,
+		  text: "not found"
+	 })
+  } else {
 
+    res.render('detail.ejs', {
+      data: data[index]
+    })
+  }
 }

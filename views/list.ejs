@@ -4,12 +4,20 @@
 
 <% if (typeof data !== undefined && data.length !== 0) { %>
   <table>
-    <caption>Some places I’ve been or would like to go.</caption>
+    <caption>Some places I’ve been or would like to go. Hello.</caption>
     <tr>
-      <th>Name</th>
+ <th>Name</th>
       <th>Continent</th>
       <th>Capital</th>
     </tr>
+	<!-- step 3: templates -->
+	<% data.forEach (function (land, index) { %>
+	<tr>
+	 <td> <a href="/<%= index %> "><%= land.name %></a> </td>
+	  <td> <%= land.continent %> </td>
+	  <td> <%= land.capital %> </td>
+	</tr>
+	<% }) %>
     <!-- Step 3: Templates -->
   </table>
 <% } else { %>
